@@ -31,5 +31,5 @@ public class Manager extends  Employee{
 
     public int getNumbersSubordinate() {
         return numbersSubordinate;
-    }
+    }-
 }
