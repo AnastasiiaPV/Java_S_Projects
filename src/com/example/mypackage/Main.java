@@ -7,7 +7,7 @@ public class Main {
         Manager manager = new Manager("Manager_Jon",50,'M',40,15);
         Employee employee = new Employee("Employee_Jon",50,'M',40);
 
-        System.out.println(manager.getSalaryM(MonthUtils.monthsOfYear));
+        System.out.println(manager.getSumSalary(MonthUtils.monthsOfYear));
         System.out.println(employee.getSumSalary(MonthUtils.monthsOfYear));
     }
 }

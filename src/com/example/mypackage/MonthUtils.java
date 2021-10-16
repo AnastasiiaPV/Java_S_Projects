@@ -1,9 +1,9 @@
 package com.example.mypackage;
 
-public class MonthUtils{
+public final class MonthUtils extends Month{
     // Создать класс MonthUtils который бы хранил подготовленные месяцы или их массивы для
 // использования (объекты класса Month).
-    public static Month January =new Month("January",31,22);
+    public final static Month JANUARY =new Month("January",31,22);
     public static Month February =new Month("February",28,20);
     public static Month March =new Month("March",31,23);
     public static Month April =new Month("April",30,21);
@@ -16,10 +16,14 @@ public class MonthUtils{
     public static Month November =new Month("November",30,22);
     public static Month December =new Month("December",31,21);
 
-    public static Month[] monthsOfYear = new Month[]{January,February,March,April,May,Jun,July,Avgust,September,October,November,December};
+    public static Month[] monthsOfYear = new Month[]{JANUARY,February,March,April,May,Jun,July,Avgust,September,October,November,December};
 
-    public static Month[] winterMonths = new Month[]{December,January,February};
+    public static Month[] winterMonths = new Month[]{December,JANUARY,February};
     public static Month[] springMonths = new Month[]{March,April,May};
     public static Month[] summerMonths = new Month[]{Jun,July,Avgust};
     public static Month[] fallMonths = new Month[]{September,October,November};
+
+    public MonthUtils(String monthName, int daysMonthNumber, int workDaysNumber) {
+        super(monthName, daysMonthNumber, workDaysNumber);
+    }
 }

@@ -21,11 +21,12 @@ public class Employee{
 
     public double getSumSalary(Month[] monthArray){
         double sumSalary=0;
+
 //        for (int i = 0; i < monthArray.length; i++) {
-//            sumSalary += salary;
+//            sumSalary += salaryPerDay * monthArray[i].getWorkDaysNumber();
 //        }
         for(Month month : monthArray){
-            sumSalary += salaryPerDay;
+            sumSalary += salaryPerDay * month.getWorkDaysNumber();
         }
         return sumSalary;
     }
@@ -56,5 +57,9 @@ public class Employee{
 
     public void setSalary(double salaryPerDay) {
         this.salaryPerDay= salaryPerDay;
+    }
+
+    public double getSalaryPerDay() {
+        return salaryPerDay;
     }
 }

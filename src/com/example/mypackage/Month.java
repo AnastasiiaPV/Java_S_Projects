@@ -13,4 +13,8 @@ public class Month {
         this.daysMonthNumber = daysMonthNumber;
         this.workDaysNumber = workDaysNumber;
     }
+
+    public int getWorkDaysNumber() {
+        return workDaysNumber;
+    }
 }

@@ -8,60 +8,25 @@ package com.example.mypackage;
 //        К рассчитанной ЗП должно прибавляться по 1% за каждого подчиненного.
 
 
-public class Manager{
+public class Manager extends  Employee{
 
-    private String nameManager;
-    private int ageManager;
-    private char genderManager;
-    private double salaryPerDayManager;
     private int numbersSubordinate;
 
-    public Manager(String nameManager, int ageManager, char genderManager, double salaryPerDayManager,
-                   int numbersSubordinate) {
-
-        this.nameManager = nameManager;
-        this.ageManager = ageManager;
-        this.genderManager = genderManager;
-        this.salaryPerDayManager = salaryPerDayManager;
+    public Manager(String nameEmployee, int ageEmployee, char genderEmployee, double salaryPerDay, int numbersSubordinate) {
+        super(nameEmployee, ageEmployee, genderEmployee, salaryPerDay);
         this.numbersSubordinate = numbersSubordinate;
     }
 
-    public double getSalaryM(Month[] monthArray){
+    @Override
+    public double getSumSalary(Month[] monthArray){
 
         double sumSalary=0;
         for (int i = 0; i < monthArray.length; i++) {
-            sumSalary += salaryPerDayManager;
+            sumSalary += getSalaryPerDay()*monthArray[i].getWorkDaysNumber();
         }
         sumSalary += sumSalary/100*numbersSubordinate;
+
         return sumSalary;
-    }
-
-    public String getNameManager() {
-        return nameManager;
-    }
-
-    public void setNameManager(String nameManager) {
-        this.nameManager = nameManager;
-    }
-
-    public int getAgeManager() {
-        return ageManager;
-    }
-
-    public void setAgeManager(int ageManager) {
-        this.ageManager = ageManager;
-    }
-
-    public char getGenderManager() {
-        return genderManager;
-    }
-
-    public void setGenderManager(char genderManager) {
-        this.genderManager = genderManager;
-    }
-
-    public void setSalaryPerDayManager(double salaryPerDayManager) {
-        this.salaryPerDayManager = salaryPerDayManager;
     }
 
     public int getNumbersSubordinate() {
