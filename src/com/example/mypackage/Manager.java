@@ -32,8 +32,4 @@ public class Manager extends  Employee{
     public int getNumbersSubordinate() {
         return numbersSubordinate;
     }
-
-    public void setNumbersSubordinate(int numbersSubordinate) {
-        this.numbersSubordinate = numbersSubordinate;
-    }
 }
