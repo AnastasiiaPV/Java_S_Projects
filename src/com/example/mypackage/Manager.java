@@ -8,12 +8,12 @@ package com.example.mypackage;
 //        К рассчитанной ЗП должно прибавляться по 1% за каждого подчиненного.
 
 
-public class Manager extends  Employee{
+public final class Manager extends  BaseEmployee{
 
-    private int numbersSubordinate;
+    private final int numbersSubordinate;
 
     public Manager(String nameEmployee, int ageEmployee, char genderEmployee, double salaryPerDay, int numbersSubordinate) {
-        super(nameEmployee, ageEmployee, genderEmployee, salaryPerDay);
+        super(nameEmployee,ageEmployee,genderEmployee,salaryPerDay);
         this.numbersSubordinate = numbersSubordinate;
     }
 
@@ -31,5 +31,5 @@ public class Manager extends  Employee{
 
     public int getNumbersSubordinate() {
         return numbersSubordinate;
-    }-
+    }
 }
