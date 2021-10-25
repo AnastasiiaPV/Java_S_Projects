@@ -1,20 +1,19 @@
 package com.example.mypackage;
-//Задача №1
-//
-//Создать класс Month с полями: имя месяца, количеством дней и количеством рабочих дней.
 
-public class Month {
+public class MonthImpl implements IMonth{
+
     private String monthName;
     private int daysMonthNumber;
     private int workDaysNumber;
 
-    public Month(String monthName, int daysMonthNumber, int workDaysNumber) {
+    public MonthImpl(String monthName, int daysMonthNumber, int workDaysNumber) {
         this.monthName = monthName;
         this.daysMonthNumber = daysMonthNumber;
         this.workDaysNumber = workDaysNumber;
     }
 
+    @Override
     public int getWorkDaysNumber() {
-        return workDaysNumber;
+        return this.workDaysNumber;
     }
 }
